@@ -1,0 +1,87 @@
+header{
+  height: max-content;
+  min-width: max-content;
+  background-color: var(--primay-color);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 1em;
+  align-items: center;
+  top: 0;
+}
+.search-cont{
+  display: flex;
+  gap: 0;
+}
+.searchBar{
+  height: 30px;
+  width: 90%;
+  padding-left: 10px;
+  margin: 0;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.search-button{
+  height: 30px;
+  padding: 0 10px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.logo{
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  text-wrap: nowrap;
+}
+.logo:hover{
+  cursor: default;
+}
+.logo-img{
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  margin-left: 20px;
+}
+.logo h3{
+  color: var(--logo-font-color);
+}
+
+.sideBtns{
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 0 20px;
+  gap: .5em;
+}
+
+.sideBtn{
+  height: 20px;
+  width: 20px;
+}
+.cart, .profile{
+  height: var(--icon-size);
+  width: var(--icon-size);
+  object-fit: contain;
+  background: none;
+  border: none;
+}
+.cart + .profile:hover{
+  cursor: pointer;
+}
+
+.navSection{
+  min-width: max-content;
+  grid-column: 1 / span 3;
+  font-size: 1rem;
+  background-color: rgb(39, 38, 38);
+}
+.navSection nav{
+  min-width: max-content;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  text-align: center;
+}
+  .navSection nav a{
+    color: white;
+  }

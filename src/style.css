@@ -1,0 +1,147 @@
+@import "./partialCSS/header.css";
+@import "./partialCSS/hero.css";
+@import "./partialCSS/pop-up.css";
+@import "./partialCSS/footer.css";
+@import "./partialCSS/animation.css";
+
+/* @import "./partialCSS/swiper.css"; */
+
+*{
+  margin: 0;
+  padding: 0;
+  /* border: 1px white solid; */
+  letter-spacing: -.5px;
+}
+
+:root{
+  --primay-color: #ED9455;
+  --secondary-color: #FFEC9E;
+  --tertiary-color: #fffef9;
+  --tertary-color: #fef331;
+  --logo-font-color: #343131;
+  --general-text-color: #282525;
+  --icon-size: 20px;
+  --boldness: 700;
+  --title-font:25px;
+  --description-font: 18px;
+  --max-wdith: 1080px
+}
+
+a{
+  text-decoration: none;
+  color: var(--general-text-color);
+}
+
+body{
+  background-color: #f3f4ff;
+}
+
+.tools{
+  height: fit-content;
+  padding: 30px 0;
+  margin-bottom: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+.tool-button{
+  width: 50px;
+  padding: 10px;
+  border: solid 1px #343131;
+  border-radius: 10px;
+  font-size: .5rem;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* on sale */
+.on-sale{
+  height: 100px;
+  padding: 10px 30px;
+  margin: 10px 0;
+  background-color: white;
+  display: grid;
+  grid-row: 50px 1fr;
+}
+
+.categories{
+  height: fit-content;
+  padding: 10px 30px;
+  background-color: white;
+}
+.category-wrapper{
+  padding: 20px 0;
+  display: flex;
+  grid-template-columns: repeat(6, auto);
+  overflow-x: auto;
+  gap: 1em;
+  justify-content: center;
+}
+
+.category{
+  height: 50px;
+  min-width: 200px;
+  border: solid 1px black;
+  border-radius: 20px;
+  text-align: center;
+  display: grid;
+  align-items: center;
+}
+
+.productList{
+  height: fit-content;
+  padding: 100px 20px;
+  background-color: var(--tertiary-color);
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: center;
+  gap: 2em;
+}
+.item{
+  height: auto;
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
+}
+.product-img{
+  height: 300px;
+  width: auto;
+  object-fit:fill;
+}
+
+.product{
+  height: 30px;
+  width: auto;
+}
+
+.new-prod{
+  height: fit-content;
+  padding: 100px 30px;
+  background-color: var(--secondary-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+.new-prod h1{
+  height: fit-content;
+  width: min-content;
+  grid-column: 1 / span 2;
+}
+.new-prod-img{
+  height: 250px;
+}
+.new-prod-des{
+  height: 250px;
+}
+
+/*tablet view*/
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+
+}
+
+/* mobile view */
+@media screen and (max-width: 768px) and (min-width:485px){
+
+}

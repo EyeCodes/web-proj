@@ -1,0 +1,8 @@
+.hero{
+  height: 300px;
+  /* background-color: gray; */
+  background-image: url("/src/images/resources/banner_QA.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
