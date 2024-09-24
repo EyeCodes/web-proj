@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="style.css" rel="stylesheet">
   <link href="./swiper/swiper-bundle.min.css">
+  <link href="./webfonts/all.css" rel="stylesheet">
   <script src="./swiper/swiper-bundle.min.js"></script>
+  <script src="./controls.js" defer></script>
   <title>Quick Accessories</title>
 </head>
 
@@ -14,7 +16,7 @@
   <header>
     <div class="logo">
     <img src="./images/resources/QA-logo.svg" alt="Logo" class="logo-img">
-      <h3>Quick Accessories</h3>
+      <h2>Quick Accessories</h2>
     </div>
 
     <div class="search-cont">
@@ -24,8 +26,9 @@
     
     <div class="sideBtns">
       <a href="" class="notifaction-button">notif</a>
-      <a href="" class="sideBtn cart"><img src="./images/resources/cart.png" alt="cart-icon" class="cart"></a>
-      <button class="sideBtn profile"><img src="./images/resources/user.png" alt="profile-icon" id="profileBtn" class="profile"></button>
+      <a href="" class="sideBtn cart"><i class="fa fa-cart-shopping"></i></a>
+        <button class="sideBtn profile"> <i class="fa fa-user" id="profileBtn"></i>
+        </button>
   
       <div class="profile-pop-up">
         <nav>
@@ -33,7 +36,11 @@
           <hr>
           <a href="">Cart</a>
           <hr>
-          <button id="darkmode">Theme</button>
+          <div class="theme-wrapper">
+            <span>THEME</span>
+          <input type="checkbox" id="toggle">
+          <label for="toggle" class="darkmode"></label>
+          </div>
           <hr>
           <a href="">Log Out</a>
         </nav>
@@ -63,31 +70,44 @@
 </div>
 
 <div class="categories">
-  <h5>Categories</h5>
-  <div class="category-wrapper">
-    <div class="category">Bracelets</div>
-    <div class="category">Earings</div>
-    <div class="category">Sunglasses</div>
-    <div class="category">Watch</div>
-    <div class="category">Rings</div>
-    <div class="category">Hat</div>
-    <div class="category">Necklaces</div>
-    <div class="category">SmartWatch</div>
-    <div class="category">Scarf</div>
-    <div class="category">Hair Accessories</div>
-    <div class="category">Wallet</div>
-    <div class="category">Stocking</div>
-    <div class="category">Belt</div>
+  <h3>Categories</h3> <button class="expand"></button>
+  <div class="category-wrapper scrollable">
+    <span class="category">Bracelets</span>
+    <span class="category">Earings</span>
+    <span class="category">Sunglasses</span>
+    <span class="category">Watch</span>
+    <span class="category">Rings</span>
+    <span class="category">Hat</span>
+    <span class="category">Necklaces</span>
+    <span class="category">SmartWatch</span>
+    <span class="category">Scarf</span>
+    <span class="category">Hair Accessories</span>
+    <span class="category">Wallet</span>
+    <span class="category">Stocking</span>
+    <span class="category">Belt</span>
   </div>
 </div>
 
-<div class="on-sale">
-  <h5>SALES</h5>
+<div class="display-product">
+  <h3>SALES</h3>
+  <div id="onSale" class="product-wrapper"></div>
+    <button  id="next" class="slide to-right" type="button"><i class="fa fa-circle-chevron-right slide-icons"></i></button>
+    <button id="prev" class="slide to-left" type="button" style="display: none;"><i class="fa fa-circle-chevron-left slide-icons"></i></button>
+</div>
+
+<div class="display-product">
+  <h3>TRENDING</h3>
+  <div id="onTrend" class="product-wrapper"></div>
+</div>
+
+<div class="display-product">
+  <h3>DISCOVER</h3>
+  <div id="discovery" class="product-wrapper"></div>
 </div>
 
   <footer id="footer">
     <div class="logo">
-      <h3>Quicl Accessories</h3>
+      <h2>QUICK ACCESSORIES</h2>
     </div>
     <div class="ftr">
       <div class="social-links"></div>

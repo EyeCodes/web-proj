@@ -2,13 +2,16 @@
 footer{
   height: fit-content;
   padding: 50px 30px;
-  background-color: var(--primay-color);
+  background-color: var(--light-dark-color);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
 }
 footer .logo, .ftr{
   height: 150px;
+}
+footer .logo h2{
+  color: var(--secondary-color);
 }
 .ftr:nth-child(2){
   display: flex;  

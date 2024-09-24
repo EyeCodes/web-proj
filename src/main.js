@@ -10,34 +10,88 @@ var array = [{
     name: "EGGPLANT"
     },
     {
-      image: "price",
+      image:"./images/product/skull.jpg",
       price: 20_000,
       name: "NIKOAVOCADO"
       },
       {
-        image: "price",
+        image: "./images/product/skull.jpg",
         price: 20_000,
         name: "NIKOAVOCADO"
-        }
+        },
+        {
+          image: "./images/product/skull.jpg",
+          price: 20_000,
+          name: "NIKOAVOCADO"
+          },
+          {
+            image: "./images/product/skull.jpg",
+            price: 20_000,
+            name: "NIKOAVOCADO"
+            },
+            {
+              image: "./images/product/skull.jpg",
+              price: 20_000,
+              name: "NIKOAVOCADO"
+              },
+              {
+                image: "./images/product/skull.jpg",
+                price: 20_000,
+                name: "NIKOAVOCADO"
+                },
+                {
+                  image: "./images/product/skull.jpg",
+                  price: 20_000,
+                  name: "NIKOAVOCADO"
+                  },
+                  {
+                    image: "./images/product/skull.jpg",
+                    price: 20_000,
+                    name: "NIKOAVOCADO"
+                    }
       ]
 
   // console.log(JSON.stringify(array))
   
-  var out = "";
+  var displayOnSale = "";
   for(let i = 0; i < array.length; i++){
-    out += `<div class="item"> 
+    displayOnSale += `<div class="item"> 
     <img class="product-img" src="${array[i].image}">
     <div class="product price">${array[i].price}</div>
     <div class="product brand">${array[i].name}</div>
 </div>`
   }
-  document.getElementById("prodList").innerHTML = out;
+  document.getElementById("onSale").innerHTML = displayOnSale;
+
+  // TRENDING 
+
+  var displayOnTrend = "";
+  for(let i = 0; i < 6; i++){
+    displayOnTrend += `<div class="item"> 
+    <img class="product-img" src="${array[i].image}">
+    <div class="product price">${array[i].price}</div>
+    <div class="product brand">${array[i].name}</div>
+</div>`
+  }
+  document.getElementById("onTrend").innerHTML = displayOnTrend;
+
+  // DISCOVER
+
+  var displayDiscovery = "";
+  for(let i = 0; i < array.length; i++){
+    displayDiscovery += `<div class="item"> 
+    <img class="product-img" src="${array[i].image}">
+    <div class="product price">${array[i].price}</div>
+    <div class="product brand">${array[i].name}</div>
+</div>`
+  }
+  document.getElementById("discovery").innerHTML = displayDiscovery;
 
   //profile menu
 
+  let profileToggle = 0;
   const profileBtn = document.getElementById("profileBtn")
 
-  let profileToggle = 0;
 
   const profilePopUp = document.querySelector(".profile-pop-up") 
   
@@ -51,30 +105,5 @@ var array = [{
       profilePopUp.setAttribute("style", "display: block")
       profileToggle = 0
     }
+    console.log(profileToggle)
   })
-
-  var monthly = ''
-
-  for(let i; i < 1; i++){
-    monthly += 
-    `    <div class="subscription">
-      <h1>MEMBERSHIP</h1>
-      <hr>
-        <section>
-          Membership benifits
-        </section>
-        <div>
-          <button class="monthly" type="submit">monthly</button>
-          <button class="yearly" type="submit">yearly</button>
-        </div>
-    </div>
-    <button class="order">Order</button>
-  </div>`
-  }
-
-  const monthlySubscriptionFrom = document.getElementById("monthlySub")
-
-  monthlySubscriptionFrom.addEventListener("click", () =>{
-    
-  })
-
