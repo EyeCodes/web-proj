@@ -66,7 +66,7 @@ var array = [{
   // TRENDING 
 
   var displayOnTrend = "";
-  for(let i = 0; i < 6; i++){
+  for(let i = 0; i < 5; i++){
     displayOnTrend += `<div class="item"> 
     <img class="product-img" src="${array[i].image}">
     <div class="product price">${array[i].price}</div>

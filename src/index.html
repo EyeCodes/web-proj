@@ -13,26 +13,28 @@
 
 <body>
   
+  
   <header>
     <div class="logo">
     <img src="./images/resources/QA-logo.svg" alt="Logo" class="logo-img">
       <h2>Quick Accessories</h2>
     </div>
-
+    
     <div class="search-cont">
-      <input type="search" class="searchBar" placeholder="Search...">
-      <button class="search-button">SEARCH</button>
+      <form action="get" class="searchBar"><input type="search" placeholder="Search...">
+        <button class="search-button">SEARCH</button>
+      </form>
     </div>
     
     <div class="sideBtns">
-      <a href="" class="notifaction-button">notif</a>
+      <a href="" class="sideBtn notification-btn"><i class="fa fa-bell"></i></a>
       <a href="" class="sideBtn cart"><i class="fa fa-cart-shopping"></i></a>
-        <button class="sideBtn profile"> <i class="fa fa-user" id="profileBtn"></i>
+      <button class="sideBtn profile"> <i class="fa fa-user" id="profileBtn"></i>
         </button>
-  
-      <div class="profile-pop-up">
-        <nav>
-          <a href="">Profile</a>
+        
+        <div class="profile-pop-up">
+          <nav>
+            <a href="">Profile</a>
           <hr>
           <a href="">Cart</a>
           <hr>
@@ -46,10 +48,10 @@
         </nav>
       </div>
     </div>
-  </div>
-  <div class="navSection">
-    <nav>
-      <a>Deals</a>
+    
+    <div class="navSection">
+      <nav>
+        <a>Deals</a>
       <a>Trending</a>
       <a>NEW</a>
       <a>About us</a>
@@ -57,20 +59,22 @@
     </nav>
   </div>
   </header>
+  
+  <div class="container">
   <!--  -->
   <div class="hero">
 
   </div>
-<!--  -->
+  <!--  -->
 
-<div class="tools">
+<div class="tools cont">
   <div class="tool-button">Cart</div>
   <div class="tool-button">Vouchers</div>
   <div class="tool-button">Track Delivery</div>
 </div>
 
-<div class="categories">
-  <h3>Categories</h3> <button class="expand"></button>
+<div class="categories cont">
+  <h3>Categories</h3> <button class="expand"><i class="fa fa-square-plus"></i></button>
   <div class="category-wrapper scrollable">
     <span class="category">Bracelets</span>
     <span class="category">Earings</span>
@@ -105,30 +109,44 @@
   <div id="discovery" class="product-wrapper"></div>
 </div>
 
+</div> <!--closing tag for container-->
+
   <footer id="footer">
     <div class="logo">
       <h2>QUICK ACCESSORIES</h2>
     </div>
-    <div class="ftr">
-      <div class="social-links"></div>
-      <div class="social-links"></div>
-      <div class="social-links"></div>
-      <div class="social-links"></div>
-    </div>
-    <div class="ftr">
-      <span>email</span>
-      <span>contact no</span>
-    </div>
-    <div class="ftr">
-      <form class="emailSub">
-        <label for="emailAddress" class="emailInfo">
-          <input type="email" class="emailAd" id="emailAddress" placeholder="Email" required>
-          <button type="submit" class="emailSubmit">Send</button>
-        </label>
-      </form>
+
+    <div class="footer-info">
+      <div class="ftr">
+        <span>Customer Service</span>
+        <a href="">Help Center</a>
+        <a>FAQ</a>
+        <a>Order Tracking</a>
+        <a>Contact Us</a>
+      </div>
+  
+      <div class="ftr">
+        <span>About QA</span>
+          <a>About Us</a>
+          <a>Branches</a>
+          <a>Sponsors</a>
+          <a>Privacy Policy</a>
+        </div>
+  
+      <div class="ftr">
+      <span>Socials</span>
+        <a>facebook</a>
+        <a>twitter</a>
+        <a>instagram</a>
+        <a>linked</a>
+      </div>
+  
     </div>
 
+    <h4 class="cRights">© 2024 QuickAccessories. All Rights Reserved .</h4>
+
   </footer>
+
 
   <script src="./main.js"></script>
 

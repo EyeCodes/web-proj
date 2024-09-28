@@ -130,3 +130,12 @@
     background-size: cover;
     opacity: 0.3; 
 }
+
+    <!-- <div class="ftr">
+      <form class="emailSub">
+        <label for="emailAddress" class="emailInfo">
+          <input type="email" class="emailAd" id="emailAddress" placeholder="Email" required>
+          <button type="submit" class="emailSubmit">Send</button>
+        </label>
+      </form>
+    </div> -->

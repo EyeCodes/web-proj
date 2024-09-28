@@ -1,51 +1,43 @@
 
 footer{
   height: fit-content;
-  padding: 50px 30px;
-  background-color: var(--light-dark-color);
+  padding: 30px;
+  border-top: solid var(--lighter-dark-color) 3px;
+  box-shadow: 0px 2px 5px 1px var(--dark-color);
+  background-color: var(--light-color);
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em;
-}
-footer .logo, .ftr{
-  height: 150px;
-}
-footer .logo h2{
-  color: var(--secondary-color);
-}
-.ftr:nth-child(2){
-  display: flex;  
-  flex-direction: row;
-  background-color: aqua;
-  gap: 1em;
-  align-items: center;
-}
-.ftr:nth-child(3){
-  background-color: gray;
-  display: grid;
-}
-.ftr:nth-child(4){
-  display: flex;
-  align-items: center;
-}
-.social-links{
-  background-color: antiquewhite;
-  height: 50px;
-  width: 50px;
 }
 
-.emailSub{
-  height: 50px;
-  width: auto;
+footer .logo{
+  justify-content: center;
+  color: var(--dark-color);
+}
+
+.footer-info{
+  height: max-content;
+  padding: 20px 0;
   display: grid;
-  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-.emailAd{
-  height: 2.5em;
-  width: 20em;
-  padding-left: 10px;
+
+.ftr{
+  display: grid;
+  grid-auto-flow: row;
+  text-align: center;
 }
-.emailSubmit{
-  height: 2.5em;
-  width: 3em;
+.ftr span{
+  color: var(--dark-color);
+  font-size: var(--description-font);
+  padding: 10px 0;
+}
+.ftr a{
+  padding: 5px 0;
+  color: var(--lighter-dark-color);
+  font-weight: var(--bold);
+  font-size: .8em;
+}
+
+.cRights{
+  padding: 10px 0;
+  color: var(--lighter-dark-color);
 }

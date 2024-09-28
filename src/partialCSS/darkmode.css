@@ -13,7 +13,7 @@
   --lighter-dark-color: #686435;  
 }
 
-.f{
+/* .f{
   --primay-color: #ffeb00;
   --secondary-color: #fff150;
   --tertiary-color: #fff68b;
@@ -26,7 +26,7 @@
   --white-color: #000000;
   --light-dark-color: #353318;
   --lighter-dark-color: #686435;  
-}
+} */
 
 .theme-wrapper{
   display: grid;
