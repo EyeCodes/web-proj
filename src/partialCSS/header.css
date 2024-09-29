@@ -1,7 +1,7 @@
 header{
   height: max-content;
   min-width: max-content;
-  background-color: var(--primay-color);
+  background-color: var(--primary-color);
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-template-rows: 60px auto;

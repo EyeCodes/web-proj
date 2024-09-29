@@ -1,51 +1,51 @@
 
 var array = [{
-  image: "./images/product/skull.jpg",
+  image: "./images/resources/placeholder.png",
   price: 1_000_000,
   name: "TSINILAS"
   },
   {
-    image: "./images/product/cherry.jpg",
+    image: "./images/resources/placeholder.png",
     price: 294,
     name: "EGGPLANT"
     },
     {
-      image:"./images/product/skull.jpg",
+      image:"./images/resources/placeholder.png",
       price: 20_000,
       name: "NIKOAVOCADO"
       },
       {
-        image: "./images/product/skull.jpg",
+        image: "./images/resources/placeholder.png",
         price: 20_000,
         name: "NIKOAVOCADO"
         },
         {
-          image: "./images/product/skull.jpg",
+          image: "./images/resources/placeholder.png",
           price: 20_000,
           name: "NIKOAVOCADO"
           },
           {
-            image: "./images/product/skull.jpg",
+            image: "./images/resources/placeholder.png",
             price: 20_000,
             name: "NIKOAVOCADO"
             },
             {
-              image: "./images/product/skull.jpg",
+              image: "./images/resources/placeholder.png",
               price: 20_000,
               name: "NIKOAVOCADO"
               },
               {
-                image: "./images/product/skull.jpg",
+                image: "./images/resources/placeholder.png",
                 price: 20_000,
                 name: "NIKOAVOCADO"
                 },
                 {
-                  image: "./images/product/skull.jpg",
+                  image: "./images/resources/placeholder.png",
                   price: 20_000,
                   name: "NIKOAVOCADO"
                   },
                   {
-                    image: "./images/product/skull.jpg",
+                    image: "./images/resources/placeholder.png",
                     price: 20_000,
                     name: "NIKOAVOCADO"
                     }
@@ -55,18 +55,22 @@ var array = [{
   
   var displayOnSale = "";
   for(let i = 0; i < array.length; i++){
-    displayOnSale += `<div class="item"> 
+    displayOnSale += `<div class="swiper-slide item"> 
     <img class="product-img" src="${array[i].image}">
     <div class="product price">${array[i].price}</div>
     <div class="product brand">${array[i].name}</div>
-</div>`
+      </div>`
   }
-  document.getElementById("onSale").innerHTML = displayOnSale;
+   document.getElementById("onSale").innerHTML = displayOnSale //+ `
+  // <div class="swiper-pagination"></div>
+  // <!-- If we need navigation buttons -->
+  // <div class="swiper-button-prev"></div>
+  // <div class="swiper-button-next"></div>`;
 
   // TRENDING 
 
   var displayOnTrend = "";
-  for(let i = 0; i < 5; i++){
+  for(let i = 0; i <= 3; i++){
     displayOnTrend += `<div class="item"> 
     <img class="product-img" src="${array[i].image}">
     <div class="product price">${array[i].price}</div>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="style.css" rel="stylesheet">
-  <link href="./swiper/swiper-bundle.min.css">
+  <!-- <link href="./swiper/swiper-bundle.min.css"> -->
   <link href="./webfonts/all.css" rel="stylesheet">
   <script src="./swiper/swiper-bundle.min.js"></script>
   <script src="./controls.js" defer></script>
@@ -12,7 +12,6 @@
 </head>
 
 <body>
-  
   
   <header>
     <div class="logo">
@@ -59,11 +58,25 @@
     </nav>
   </div>
   </header>
-  
+
   <div class="container">
   <!--  -->
   <div class="hero">
-
+      <div class="swiper hero-slider">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><img src="./images/resources/banner_QA.svg" alt="bnner"></div>
+          <div class="swiper-slide"><img src="./images/resources/placeholder.png" alt="" ></div>
+          <div class="swiper-slide"><img src="./images/resources/placeholder.png" alt="" ></div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- <div class="swiper-pagination"></div> -->
+      </div>
   </div>
   <!--  -->
 
@@ -74,7 +87,7 @@
 </div>
 
 <div class="categories cont">
-  <h3>Categories</h3> <button class="expand"><i class="fa fa-square-plus"></i></button>
+  <h3>CATEGORIES</h3> <button class="expand"><i class="fa fa-square-plus"></i></button>
   <div class="category-wrapper scrollable">
     <span class="category">Bracelets</span>
     <span class="category">Earings</span>
@@ -92,20 +105,26 @@
   </div>
 </div>
 
+<h3 class="catalog-section">SALES</h3>
 <div class="display-product">
-  <h3>SALES</h3>
-  <div id="onSale" class="product-wrapper"></div>
-    <button  id="next" class="slide to-right" type="button"><i class="fa fa-circle-chevron-right slide-icons"></i></button>
-    <button id="prev" class="slide to-left" type="button" style="display: none;"><i class="fa fa-circle-chevron-left slide-icons"></i></button>
+  <div class="swiper sales-container">
+    <div id="onSale" class="swiper-wrapper sales-wrapper">
+    <div class="swiper-pagination"></div>
+      
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    </div>
+  </div>
 </div>
 
+<h3 class="catalog-section">TRENDING</h3>
 <div class="display-product">
-  <h3>TRENDING</h3>
   <div id="onTrend" class="product-wrapper"></div>
 </div>
 
+<h3 class="catalog-section">DISCOVER</h3>
 <div class="display-product">
-  <h3>DISCOVER</h3>
   <div id="discovery" class="product-wrapper"></div>
 </div>
 
@@ -149,7 +168,31 @@
 
 
   <script src="./main.js"></script>
+  <script>
+    const swiper = new Swiper('.hero-slider', {
+    // Optional parameters
+    centeredSlides: true,
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    }
+    
+  });
 
+  const swiperSales = new Swiper('.sales-container', {
+    slidesPerView: 4,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    }
+  }) 
+
+    </script>
 
 </body>
 </html>

@@ -1,8 +1,0 @@
-.hero{
-  height: 20em;
-  background-image: url("/src/images/resources/banner_QA.svg");
-  background-size: contain;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-blend-mode:darken;
-}

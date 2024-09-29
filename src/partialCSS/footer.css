@@ -1,7 +1,7 @@
 
 footer{
   height: fit-content;
-  padding: 30px;
+  padding: 10px;
   border-top: solid var(--lighter-dark-color) 3px;
   box-shadow: 0px 2px 5px 1px var(--dark-color);
   background-color: var(--light-color);
@@ -38,6 +38,7 @@ footer .logo{
 }
 
 .cRights{
-  padding: 10px 0;
-  color: var(--lighter-dark-color);
+  color: var(--dark-color);
+  font-size: small;
+  opacity: .5;
 }

@@ -23,39 +23,6 @@ for(let i=0; i < scrollable.length; i++){
 
 // +++++++++++++++++++++++++++++++++++++++++
 
-const nextBtn = document.getElementById("next");
-const prevBtn = document.getElementById("prev");
-const sales =   document.getElementById("onSale")
-
-nextBtn.onclick = () => {
-
-  sales.scrollLeft += 500;
-
-  if(sales.scrollLeft > 0){
-    prevBtn.disabled = false
-    prevBtn.style.display = "inline-block"
-  }
-  if(Math.round(sales.scrollLeft) == (sales.scrollWidth - sales.clientWidth)){
-    nextBtn.disabled = true
-    nextBtn.style.display = "none"
-  }
-}
-
-prevBtn.onclick = () => {
-  
-  sales.scrollLeft -= 500;
-  
-  if(sales.scrollLeft == 0){
-    prevBtn.disabled  = true
-    prevBtn.style.display = "none"
-  }
-  if(Math.round(sales.scrollLeft) != (sales.scrollWidth - sales.clientWidth)){
-    nextBtn.disabled = false
-    
-    nextBtn.style.display = "inline-block"
-  }
-}
-
 // minimize tool
 
 const expand = document.querySelector(".expand");

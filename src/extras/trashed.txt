@@ -139,3 +139,82 @@
         </label>
       </form>
     </div> -->
+
+
+       
+      // pagination: {
+      //         el: '.swiper-pagination',
+      //         type: 'fraction',
+      //         clickable: true,
+              
+      //       // renderFraction: function (currentClass, totalClass) {
+      //       // return '<span class="' + currentClass + '"></span>' + ' <span>&nbsp — &nbsp</span> ' + '<span class="' + totalClass + '"></span>'; }
+      //       },
+
+      
+const nextBtn = document.getElementById("next");
+const prevBtn = document.getElementById("prev");
+const sales =   document.getElementById("onSale")
+
+nextBtn.onclick = () => {
+
+  sales.scrollLeft += 500;
+
+  if(sales.scrollLeft > 0){
+    prevBtn.disabled = false
+    prevBtn.style.display = "inline-block"
+  }
+  if(Math.round(sales.scrollLeft) == (sales.scrollWidth - sales.clientWidth)){
+    nextBtn.disabled = true
+    nextBtn.style.display = "none"
+  }
+}
+
+prevBtn.onclick = () => {
+  
+  sales.scrollLeft -= 500;
+  
+  if(sales.scrollLeft == 0){
+    prevBtn.disabled  = true
+    prevBtn.style.display = "none"
+  }
+  if(Math.round(sales.scrollLeft) != (sales.scrollWidth - sales.clientWidth)){
+    nextBtn.disabled = false
+    
+    nextBtn.style.display = "inline-block"
+  }
+}
+
+ <button  id="next" class="slide to-right" type="button"><i class="fa fa-circle-chevron-right slide-icons"></i></button>
+    <button id="prev" class="slide to-left" type="button" style="display: none;"><i class="fa fa-circle-chevron-left slide-icons"></i></button>
+
+    .slide{
+  height: fit-content;
+  width: fit-content;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  align-self: center;
+  margin: 10px;
+  background: none;
+  transition: .1 ease-in-out;
+}
+.to-right{
+  right: 0;
+}
+.to-left{
+  left: 0;
+}
+.prev:disabled, .next:disabled{
+display: none;
+}
+
+.slide-icons{
+  font-size:50px;
+  background-color: none;
+  border-radius: 100%;
+  color: black !important;
+  /* border: solid 2px black; */
+  filter: drop-shadow(1px 1px 3px black);
+}
+
