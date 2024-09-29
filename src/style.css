@@ -1,0 +1,220 @@
+@import "./partialCSS/header.css";
+@import "./partialCSS/hero.css";
+@import "./partialCSS/footer.css";
+@import "./partialCSS/animation.css";
+@import "./partialCSS/pop-up.css";
+@import "./partialCSS/darkmode.css";
+@import './swiper/swiper-bundle.css';
+@import "./partialCSS/sliders.css";
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 1px red solid;
+  letter-spacing: -.3px;
+  font-weight: var(--boldness);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+}
+
+:root{
+  --primary-color: #ffeb00;
+  --secondary-color: #fff150;
+  --tertiary-color: #fff68b;
+  --tertary-color: #fffac3;
+  --lightest-color: #fdfcec;
+  --primary-dark-color:#ccbc00;
+  --secondary-dark-color:#9a8e00;
+  --tertiary-dark-color:#686000;
+  --dark-color: #312e3b;
+  --white-color: #FFFF;
+  --light-dark-color: #353318;
+  --lighter-dark-color: #686435;
+  --icon-size: 20px;
+  --boldness: 700;
+  --bold: 500;
+  --title-font:25px;
+  --description-font: 18px;
+  --max-wdith: 1080px;
+}
+
+a{
+  text-decoration: none;
+  color: var(--light-dark-color);
+}
+
+h3{
+  color: var(--light-dark-color);
+  padding: 10px 0;
+  text-indent: 30px;
+}
+
+body{
+  display: grid;
+  background-color: #efeff1;
+}
+.container{
+  gap: 0;
+  display: grid;
+  /* background-color: #312e3b; */
+  justify-self: center;
+  margin: auto 0;
+  width: var(--max-wdith);
+}
+
+.hero{
+  height: 20em;
+  margin: 20px 0;
+  background-image: url("/src/images/resources/banner_QA.svg");
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-blend-mode:darken;
+}
+
+.display-product, .cont{
+  border-radius: 5px;
+  /* border-bottom: var(--lighter-dark-color) solid 3px; */
+  box-shadow: 0px 2px 3px 1px var(--dark-color);
+}
+.tools{
+  height: fit-content;
+  padding: 30px 0;
+  margin: 20px 0;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+.tool-button{
+  width: 50px;
+  padding: 10px;
+  border: solid 1px var(--dark-color);
+  border-radius: 10px;
+  color: var(--dark-color);
+  font-size: .5rem;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.categories{
+  height: fit-content;
+  padding: 20px 0;
+  margin: 2em 0;
+  background-color: var(--white-color);
+  display: grid;
+  grid-template-columns: 95% 5%;
+}
+.categories h5{
+  display: inline-block;
+}
+.category-wrapper{
+  padding: 20px 10px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 150px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  gap: 1em;
+  grid-column: 1 / span 2;
+  justify-content: start;
+}
+.category-wrapper::-webkit-scrollbar{
+  height: 0px;
+}
+
+.category{
+  height: 50px;
+  min-width: 150px;
+  border: solid 1px var(--dark-color);
+  color: var(--dark-color);
+  border-radius: 20px;
+  text-align: center;
+  display: grid;
+  align-items: center;
+}
+
+.expand{
+  align-self: center;
+  justify-self: center;
+}
+.expand .fa{
+  font-size: 1.5rem;
+}
+
+.display-product{
+  height: fit-content;
+  margin-bottom: 2em;
+  background-color: var(--white-color);
+  border-top: solid var(--primary-color) .5em;
+  background-color: none;
+  display: grid;
+  grid-row: 50px 1fr;
+}
+.catalog-section{
+  width: 200px;
+  margin-left: 1em;
+  transform: skew(-20deg);
+  background-color: var(--primary-color);
+  /* border-bottom: var(--lighter-dark-color) solid 2px; */
+}
+.product-wrapper{
+  display: flex;
+  padding: 30px 0;
+  flex-wrap: wrap;
+  overflow-x: unset;
+  overscroll-behavior-inline: unset;
+  justify-content:center;
+  gap: 1rem;
+}
+
+.sales-wrapper{
+  height: fit-content;
+  width: fit-content;
+  gap: 1rem;
+  padding: 20px;
+  background-color: var(--white-color);
+}
+
+.item{
+  width: 240px;
+  display: flex;
+  background-color: var(--lightest-color);
+  flex-direction: column;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: var(--dark-color) 2px 2px 4px -2px;
+}
+
+#onSale::-webkit-scrollbar{
+  display: none;
+}
+.product-img{
+  height: 200px;
+  object-fit:contain;
+  border-bottom: solid 1px black;
+}
+.product{
+  height: auto;
+  width: auto;
+  border-bottom: solid 1px black;
+}
+.price, .brand{
+  padding: 5px;
+}
+
+
+/*tablet view*/
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+
+}
+
+/* mobile view */
+@media screen and (max-width: 768px) and (min-width:485px){
+
+}

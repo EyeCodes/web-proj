@@ -1,0 +1,220 @@
+
+  
+  <div class="hero">
+    <h1>Purchase Your Accessories Quick and Easy</h1>
+    <span>Here in Quick Accessories, We guarantee you a quality product and quick to arrive in your doorsteps.</span>
+
+    <div class="subscription">
+      <h1>MEMBERSHIP</h1>
+      <hr>
+        <section>
+          Membership benifits
+        </section>
+        <div>
+          <button id="monthlySub" class="monthly" type="submit">monthly</button>
+          <button id="yearlySub" class="yearly" type="submit">yearly</button>
+        </div>
+    </div>
+    <button class="order">Order</button>
+  </div>
+
+  <div class="productList" id="prodList">
+
+</div>
+  <div class="new-prod">
+    <h1>New</h1>
+    <div class="new-prod-img"></div>
+    <div class="new-prod-des"></div>
+  </div>
+
+
+  <!--  -->
+  
+.hero{
+  height: var(--hero-height);
+  margin-top: 50px;
+  padding: 0 20px;
+  background-color: var(--secondary-color);
+  display: grid;
+  grid-template-rows: 1fr 1fr 20%;
+  grid-template-columns: 60% 40%;
+  row-gap: 1em;
+  text-align: center;
+  justify-content: center;
+}
+.hero h1{
+  font-size: 2.8em;
+  color: var(--logo-font-color);
+  align-content: center;
+}
+.hero span{
+  color: var(--general-text-color);
+  font-size: var(--description-font);
+  font-weight: 500;
+  grid-row: 2 / 2;
+}
+.subscription{
+  height: 100%;
+  margin-top: 20px;
+  grid-row: 1 / span 2;
+  border-radius: 10px;
+  border: solid 2px var(--primay-color);
+  background-color: var(--tertiary-color);
+  h1{
+    font-size: 2em;
+  }
+}
+
+.subscription section{
+  height: 70%;
+}
+.subscription div{
+  height: 20%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+}
+.subscription div button{
+  height: 80%;
+  width: 50%;
+  font-size: 1em;
+  font-weight: 700;
+  border-radius: 25px;
+  transition: .1s ease;
+}
+.subscription div button:hover{
+  background-color: var(--secondary-color);
+  animation: none;
+}
+.monthly{
+  border: solid 3px var(--secondary-color);
+}
+.yearly{
+  background-color: var(--tertary-color);
+  animation: clickMe 1s infinite;
+}
+
+.order{
+  height: 3rem;
+  width: 8rem;
+  margin-top: 25px;
+  color: var(--general-text-color);
+  background-color: var(--tertiary-color);
+  font-weight: 700;
+  justify-self: center;
+  border-radius: 4px;
+  box-shadow: inset #ceb045 -2px -2px 1px;
+  border: none;
+  grid-column: 1 / 3;
+  transition: .1s ease;
+}
+.order:hover{
+  background-color: var(--secondary-color);
+  height: 3.5rem;
+  width: 8.5rem;
+}
+.hero h1, .subscription, .order{
+  z-index: 1;
+}  
+.hero::before{
+    content: "";
+    height: var(--hero-height);
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url("./images/resources/accesssories.jpg");
+    background-size: cover;
+    opacity: 0.3; 
+}
+
+    <!-- <div class="ftr">
+      <form class="emailSub">
+        <label for="emailAddress" class="emailInfo">
+          <input type="email" class="emailAd" id="emailAddress" placeholder="Email" required>
+          <button type="submit" class="emailSubmit">Send</button>
+        </label>
+      </form>
+    </div> -->
+
+
+       
+      // pagination: {
+      //         el: '.swiper-pagination',
+      //         type: 'fraction',
+      //         clickable: true,
+              
+      //       // renderFraction: function (currentClass, totalClass) {
+      //       // return '<span class="' + currentClass + '"></span>' + ' <span>&nbsp — &nbsp</span> ' + '<span class="' + totalClass + '"></span>'; }
+      //       },
+
+      
+const nextBtn = document.getElementById("next");
+const prevBtn = document.getElementById("prev");
+const sales =   document.getElementById("onSale")
+
+nextBtn.onclick = () => {
+
+  sales.scrollLeft += 500;
+
+  if(sales.scrollLeft > 0){
+    prevBtn.disabled = false
+    prevBtn.style.display = "inline-block"
+  }
+  if(Math.round(sales.scrollLeft) == (sales.scrollWidth - sales.clientWidth)){
+    nextBtn.disabled = true
+    nextBtn.style.display = "none"
+  }
+}
+
+prevBtn.onclick = () => {
+  
+  sales.scrollLeft -= 500;
+  
+  if(sales.scrollLeft == 0){
+    prevBtn.disabled  = true
+    prevBtn.style.display = "none"
+  }
+  if(Math.round(sales.scrollLeft) != (sales.scrollWidth - sales.clientWidth)){
+    nextBtn.disabled = false
+    
+    nextBtn.style.display = "inline-block"
+  }
+}
+
+ <button  id="next" class="slide to-right" type="button"><i class="fa fa-circle-chevron-right slide-icons"></i></button>
+    <button id="prev" class="slide to-left" type="button" style="display: none;"><i class="fa fa-circle-chevron-left slide-icons"></i></button>
+
+    .slide{
+  height: fit-content;
+  width: fit-content;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  align-self: center;
+  margin: 10px;
+  background: none;
+  transition: .1 ease-in-out;
+}
+.to-right{
+  right: 0;
+}
+.to-left{
+  left: 0;
+}
+.prev:disabled, .next:disabled{
+display: none;
+}
+
+.slide-icons{
+  font-size:50px;
+  background-color: none;
+  border-radius: 100%;
+  color: black !important;
+  /* border: solid 2px black; */
+  filter: drop-shadow(1px 1px 3px black);
+}
+

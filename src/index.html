@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <!-- <link href="./swiper/swiper-bundle.min.css"> -->
+  <link href="./webfonts/all.css" rel="stylesheet">
+  <script src="./swiper/swiper-bundle.min.js"></script>
+  <script src="./controls.js" defer></script>
+  <title>Quick Accessories</title>
+</head>
+
+<body>
+  
+  <header>
+    <div class="logo">
+    <img src="./images/resources/QA-logo.svg" alt="Logo" class="logo-img">
+      <h2>Quick Accessories</h2>
+    </div>
+    
+    <div class="search-cont">
+      <form action="get" class="searchBar"><input type="search" placeholder="Search...">
+        <button class="search-button">SEARCH</button>
+      </form>
+    </div>
+    
+    <div class="sideBtns">
+      <a href="" class="sideBtn notification-btn"><i class="fa fa-bell"></i></a>
+      <a href="" class="sideBtn cart"><i class="fa fa-cart-shopping"></i></a>
+      <button class="sideBtn profile"> <i class="fa fa-user" id="profileBtn"></i>
+        </button>
+        
+        <div class="profile-pop-up">
+          <nav>
+            <a href="">Profile</a>
+          <hr>
+          <a href="">Cart</a>
+          <hr>
+          <div class="theme-wrapper">
+            <span>THEME</span>
+          <input type="checkbox" id="toggle">
+          <label for="toggle" class="darkmode"></label>
+          </div>
+          <hr>
+          <a href="">Log Out</a>
+        </nav>
+      </div>
+    </div>
+    
+    <div class="navSection">
+      <nav>
+        <a>Deals</a>
+      <a>Trending</a>
+      <a>NEW</a>
+      <a>About us</a>
+      <a href="#footer">Contacts</a>
+    </nav>
+  </div>
+  </header>
+
+  <div class="container">
+  <!--  -->
+  <div class="hero">
+      <div class="swiper hero-slider">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><img src="./images/resources/banner_QA.svg" alt="bnner"></div>
+          <div class="swiper-slide"><img src="./images/resources/placeholder.png" alt="" ></div>
+          <div class="swiper-slide"><img src="./images/resources/placeholder.png" alt="" ></div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- <div class="swiper-pagination"></div> -->
+      </div>
+  </div>
+  <!--  -->
+
+<div class="tools cont">
+  <div class="tool-button">Cart</div>
+  <div class="tool-button">Vouchers</div>
+  <div class="tool-button">Track Delivery</div>
+</div>
+
+<div class="categories cont">
+  <h3>CATEGORIES</h3> <button class="expand"><i class="fa fa-square-plus"></i></button>
+  <div class="category-wrapper scrollable">
+    <span class="category">Bracelets</span>
+    <span class="category">Earings</span>
+    <span class="category">Sunglasses</span>
+    <span class="category">Watch</span>
+    <span class="category">Rings</span>
+    <span class="category">Hat</span>
+    <span class="category">Necklaces</span>
+    <span class="category">SmartWatch</span>
+    <span class="category">Scarf</span>
+    <span class="category">Hair Accessories</span>
+    <span class="category">Wallet</span>
+    <span class="category">Stocking</span>
+    <span class="category">Belt</span>
+  </div>
+</div>
+
+<h3 class="catalog-section">SALES</h3>
+<div class="display-product">
+  <div class="swiper sales-container">
+    <div id="onSale" class="swiper-wrapper sales-wrapper">
+    <div class="swiper-pagination"></div>
+      
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</div>
+
+<h3 class="catalog-section">TRENDING</h3>
+<div class="display-product">
+  <div id="onTrend" class="product-wrapper"></div>
+</div>
+
+<h3 class="catalog-section">DISCOVER</h3>
+<div class="display-product">
+  <div id="discovery" class="product-wrapper"></div>
+</div>
+
+</div> <!--closing tag for container-->
+
+  <footer id="footer">
+    <div class="logo">
+      <h2>QUICK ACCESSORIES</h2>
+    </div>
+
+    <div class="footer-info">
+      <div class="ftr">
+        <span>Customer Service</span>
+        <a href="">Help Center</a>
+        <a>FAQ</a>
+        <a>Order Tracking</a>
+        <a>Contact Us</a>
+      </div>
+  
+      <div class="ftr">
+        <span>About QA</span>
+          <a>About Us</a>
+          <a>Branches</a>
+          <a>Sponsors</a>
+          <a>Privacy Policy</a>
+        </div>
+  
+      <div class="ftr">
+      <span>Socials</span>
+        <a>facebook</a>
+        <a>twitter</a>
+        <a>instagram</a>
+        <a>linked</a>
+      </div>
+  
+    </div>
+
+    <h4 class="cRights">© 2024 QuickAccessories. All Rights Reserved .</h4>
+
+  </footer>
+
+
+  <script src="./main.js"></script>
+  <script>
+    const swiper = new Swiper('.hero-slider', {
+    // Optional parameters
+    centeredSlides: true,
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    }
+    
+  });
+
+  const swiperSales = new Swiper('.sales-container', {
+    slidesPerView: 4,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    }
+  }) 
+
+    </script>
+
+</body>
+</html>
