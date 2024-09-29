@@ -1,51 +1,51 @@
 
 var array = [{
-  image: "./images/resources/placeholder.png",
+  image: "./src/images/resources/placeholder.png",
   price: 1_000_000,
   name: "TSINILAS"
   },
   {
-    image: "./images/resources/placeholder.png",
+    image: "./src/images/resources/placeholder.png",
     price: 294,
     name: "EGGPLANT"
     },
     {
-      image:"./images/resources/placeholder.png",
+      image:"./src/images/resources/placeholder.png",
       price: 20_000,
       name: "NIKOAVOCADO"
       },
       {
-        image: "./images/resources/placeholder.png",
+        image: "./src/images/resources/placeholder.png",
         price: 20_000,
         name: "NIKOAVOCADO"
         },
         {
-          image: "./images/resources/placeholder.png",
+          image: "./src/images/resources/placeholder.png",
           price: 20_000,
           name: "NIKOAVOCADO"
           },
           {
-            image: "./images/resources/placeholder.png",
+            image: "./src/images/resources/placeholder.png",
             price: 20_000,
             name: "NIKOAVOCADO"
             },
             {
-              image: "./images/resources/placeholder.png",
+              image: "./src/images/resources/placeholder.png",
               price: 20_000,
               name: "NIKOAVOCADO"
               },
               {
-                image: "./images/resources/placeholder.png",
+                image: "./src/images/resources/placeholder.png",
                 price: 20_000,
                 name: "NIKOAVOCADO"
                 },
                 {
-                  image: "./images/resources/placeholder.png",
+                  image: "./src/images/resources/placeholder.png",
                   price: 20_000,
                   name: "NIKOAVOCADO"
                   },
                   {
-                    image: "./images/resources/placeholder.png",
+                    image: "./src/images/resources/placeholder.png",
                     price: 20_000,
                     name: "NIKOAVOCADO"
                     }
