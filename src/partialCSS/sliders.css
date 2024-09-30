@@ -1,6 +1,6 @@
 .swiper{
   height: 100%;
-  width: var(--max-wdith);
+  width: 100%;
   background-color: #cfcfcf;
 }
 .swiper-slide{

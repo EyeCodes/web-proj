@@ -39,7 +39,8 @@ body::-webkit-scrollbar{
   --bold: 500;
   --title-font:25px;
   --description-font: 18px;
-  --max-wdith: 1080px;
+  --max-width: 1080px;
+  --width: 1024px;
 }
 
 a{
@@ -65,12 +66,12 @@ body{
   display: grid;
   justify-self: center;
   margin: auto 0;
-  width: var(--max-wdith);
+  width: var(--max-width);
 }
 
 .hero{
   height: 20em;
-  width: fit-content;
+  width: var(--max-width);
   margin: 20px 0;
   position: relative;
   background-image: url("./src/images/resources/banner_QA.svg");
@@ -248,21 +249,14 @@ color: var(--tertiary-color);
   top: 3%;
   right: 3%;
   }
-.container{
-  max-width: 999px;
-  min-width: 800px;
-  display: grid;
-  gap: 0;
-  margin: 0;
-  padding: 0;
-}
-.swiper{
-  max-width: 1000px;
-  min-width: 800px;
+  .container, .hero{
+    max-width: 90dvw;
+  min-width: 835px;
+  }
 
-}
 .item{
   width: 200px;
+  min-width: 180px;
 }
 }
 
@@ -276,23 +270,33 @@ color: var(--tertiary-color);
     top: 3%;
     right: 3%;
     }
-  .container{
-    width: 750px;
-    display: grid;
-    grid-column: auto;
-    gap: 0;
-    margin: 0;
-  }
-  .swiper{
-    width: 750px;
-    min-width: 600px;
-  }
+    .container, .hero{
+      max-width: 90dvw;
+    min-width: 700px;
+    }
   .item{
     width: 200px;
+    min-width: 180px;
   }
   }
 
 /* mobile view */
-@media screen and (max-width: 768px) and (min-width:485px){
+@media screen and (max-width: 699){
 
+  .logo{
+    font-size: .5em;
+    }
+    .profile-pop-up{
+    top: 3%;
+    right: 3%;
+    }
+    .container, .hero{
+      max-width: 90dvw;
+    min-width: 200px;
+    }
+  
+  .item{
+    width: 150px;
+    min-width: 100px;
+  }
 }
