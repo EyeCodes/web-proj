@@ -55,7 +55,7 @@ var array = [{
   
   var displayOnSale = "";
   for(let i = 0; i < array.length; i++){
-    displayOnSale += `<div class="swiper-slide item"> 
+    displayOnSale += `<div class="swiper-slide item sales"> 
     <img class="product-img" src="${array[i].image}">
     <div class="product price">${array[i].price}</div>
     <div class="product brand">${array[i].name}</div>
@@ -71,7 +71,7 @@ var array = [{
 
   var displayOnTrend = "";
   for(let i = 0; i <= 3; i++){
-    displayOnTrend += `<div class="item"> 
+    displayOnTrend += `<div class="item trending"> 
     <img class="product-img" src="${array[i].image}">
     <div class="product price">${array[i].price}</div>
     <div class="product brand">${array[i].name}</div>

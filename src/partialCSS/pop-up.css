@@ -8,9 +8,10 @@
   border-radius: 25px;
   border-top-right-radius: 0;
   background-color: var(--lightest-color);
+  color: var(--light-dark-color);
   position: absolute;
-  right:40px;
-  top: 40px;
+  right:2%;
+  top: 5%;
   z-index: 3;
 }
 
