@@ -64,6 +64,7 @@ body{
 .container{
   gap: 0;
   display: grid;
+  grid-row: auto;
   justify-self: center;
   margin: auto 0;
   width: var(--max-width);
