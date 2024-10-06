@@ -72,7 +72,6 @@ body{
 .hero{
   height: 20em;
   width: var(--max-width);
-  margin: 20px 0;
   position: relative;
   background-image: url("./src/images/resources/banner_QA.svg");
   background-size: contain;
@@ -81,7 +80,7 @@ body{
   background-blend-mode:darken;
 }
 
-.display-product, .cont{
+.display-product, .cont:nth-child(3){
   border-radius: 5px;
   box-shadow: 0px 2px 5px -2px black;
 }
@@ -89,7 +88,6 @@ body{
   height: fit-content;
   width: var(--max-width);
   padding: 30px 0;
-  margin: 20px 0;
   background-color: var(--primary-color);
   display: flex;
   justify-content: center;
@@ -245,42 +243,90 @@ color: var(--tertiary-color);
 /*IPAD PRO view*/
 @media screen and (max-width: 1030px) and (min-width: 835px) {
 
-  .logo{
-  font-size: 1em;
-  }
-  .profile-pop-up{
-  top: 3%;
-  right: 3%;
-  }
-  .container, .hero{
-    max-width: 90dvw;
-  min-width: 835px;
-  }
-
-.item{
-  width: 200px;
-  min-width: 180px;
-}
-}
-
-/*IPAD MINI view*/
-@media screen and (max-width: 834px) and (min-width: 700px) {
-
-    .logo{
-    font-size: 1em;
+  header .logo h2{
+    display: none;
     }
     .profile-pop-up{
     top: 3%;
     right: 3%;
     }
-    .container, .hero{
-      max-width: 90dvw;
-    min-width: 700px;
+    .container{
+      width: 100%;
+      display: grid;
+      grid-row: auto;
     }
-  .item{
-    width: 200px;
-    min-width: 180px;
-  }
+    .hero, .tools, .categories{
+    width: 100dvw;
+    box-shadow: none;
+    border-radius: 0 !important;
+    }
+    .swiper-button-next, .swiper-button-prev{
+      display: none;
+    }
+    .display-product{
+      width: 100%;
+    }
+    .product-wrapper{
+      display: flex;
+      flex-flow: wrap;
+    }
+    #onTrend{
+      width: 100%;
+      display: flex;
+      gap: .5em;
+    }
+    #onTrend .item{
+      width: 200px;
+    }
+    .sales{
+      width: 240px !important;
+    }
+}
+
+/*IPAD MINI view*/
+@media screen and (max-width: 834px) and (min-width: 700px) {
+
+    header .logo h2{
+    display: none;
+    }
+    .profile-pop-up{
+    top: 3%;
+    right: 3%;
+    }
+    .container{
+      width: 100%;
+      display: grid;
+      grid-row: auto;
+    }
+    .hero, .tools, .categories{
+    width: 100dvw;
+    box-shadow: none;
+    border-radius: 0 !important;
+    }
+    .swiper-button-next, .swiper-button-prev{
+      display: none;
+    }
+    .display-product{
+      width: 100%;
+      justify-content: center;
+    }
+    .product-wrapper{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #discovery .item{
+      width: 30%;
+    }
+    #onTrend{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    #onTrend .item{
+      width: 100%;
+    }
+    .sales{
+      width: 240px !important;
+    }
   }
 
 /* mobile view */
@@ -294,7 +340,7 @@ color: var(--tertiary-color);
   .logo nav{
     font-size: .5em;
     }
-   header .logo h2{
+  header .logo h2{
       display: none;
     }
     .searchBar input{
@@ -321,7 +367,6 @@ color: var(--tertiary-color);
       gap: 0;
     }
     .hero{
-      margin: 0;
       height: 15em;
     }
 
@@ -334,8 +379,7 @@ color: var(--tertiary-color);
       grid-row: auto;
     }
     .hero, .tools, .categories{
-      max-width: 100svw;
-    min-width: 200px;
+    width: 100svw;
     box-shadow: none;
     border-radius: 0;
     }
@@ -361,24 +405,29 @@ color: var(--tertiary-color);
     }
     .display-product{
       border-radius: 0;
-      max-width: 100svw;
-      min-width: 200px;
+      width: 100svw;
       grid: unset;
       justify-content: center;
     }
+    .display-product:nth-child(2){
+      max-width: 10px;
+      background-color: #353318 !important;
+      border: solid black 20px;
+    }
   .product-wrapper{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: .5em;
-    row-gap: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    gap: 1em;
   }
   .sales{
     width: 190px !important;
   }
   .item{
-    width: 170px;
+    max-width: 240px;
+    width: 48%;
   }
   .ftr span, .cRights{
-    font-size: .8em !important;
+    font-size: .9em !important;
   }
 }
