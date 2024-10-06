@@ -47,10 +47,10 @@ header{
   margin-left: 20px;
   filter: drop-shadow(0 0 3px rgb(255, 255, 237));
 }
-.logo h3{
+.logo h2{
   color: var(--dark-color);
 }
-.sideBtns{
+.sideBtns-wrapper{
   height: 30px;
   width: fit-content;
   display: flex;
@@ -61,8 +61,7 @@ header{
 }
 
 .sideBtn{
-  height: 30px;
-  width: 30px;
+  
   height: var(--icon-size);
   width: var(--icon-size);
   object-fit: contain;
