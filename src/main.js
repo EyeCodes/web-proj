@@ -115,18 +115,19 @@ var array = [{
   signInBTN.addEventListener("click", () =>{
     signInandOutCont.setAttribute("style", "display: grid")
   })
-
+  
+  signInandOutWrapper.addEventListener("mouseout", () =>{
+    signInandOutCont.addEventListener("click", () =>{
+      signInandOutCont.setAttribute("style", "display: none")
+    })
+  })
+  
   signInandOutWrapper.addEventListener("mouseover", () =>{
     signInandOutCont.addEventListener("click", () =>{
       signInandOutCont.setAttribute("style", "display: grid")
     })
   })
 
-  signInandOutWrapper.addEventListener("mouseout", () =>{
-    signInandOutCont.addEventListener("click", () =>{
-      signInandOutCont.setAttribute("style", "display: none")
-    })
-  })
 
   const signUp = document.querySelector(".signUp");
   const signIn = document.querySelector(".signIn");
@@ -143,7 +144,7 @@ var array = [{
   
   signIn.addEventListener("click", () => {
     signInForm.setAttribute("style", "display: flex")
-    signUpForm.setAttribute("style", "display: none")
     signIn.setAttribute("style", "background-color: white")
+    signUpForm.setAttribute("style", "display: none")
     signUp.setAttribute("style", "background: none")
   })

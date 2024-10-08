@@ -4,9 +4,9 @@
   height: auto;
   width: 100px;
   padding: 10px;
-  border: solid 1px black;
-  background-color: var(--lightest-color);
+  background-color: var(--white-color);
   color: var(--light-dark-color);
+  box-shadow: black 0 2px 4px 1px;
   position: absolute;
   transform: translate(-20px, 5em);
   z-index: 3;
@@ -22,8 +22,13 @@
   width: auto;
   text-align: left;
 }
-.profile-pop-up a, .profile-pop-up button .profile-pop-up span{
-  text-indent: 10px;
+.theme-wrapper{
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+}
+.profile-pop-up a, .profile-pop-up button .profile-pop-up span, .theme-wrapper span{
+  font-weight: 400;
   padding: 5px 0;
 }
 .profile-pop-up a:hover, .profile-pop-up button:hover{
