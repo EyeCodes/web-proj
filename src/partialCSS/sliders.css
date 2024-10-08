@@ -27,6 +27,12 @@
   --swiper-navigation-sides-offset: 2%;
   --swiper-navigation-color: white
 }
+.swiper-button-next, .swiper-button-prev{
+  opacity: .2;
+}
+.swiper-button-next:focus, .swiper-button-prev:focus{
+  opacity: .8;
+}
 
 .discount{
   height: max-content;

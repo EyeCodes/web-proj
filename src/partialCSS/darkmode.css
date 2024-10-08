@@ -12,13 +12,7 @@
   --light-dark-color: #fff68b;
   --lighter-dark-color: #686435; 
   --cold-white:#70767a;
-}
-
-.theme-wrapper{
-  display: grid;
-  grid-auto-flow: column;
-  align-items: center;
-  text-indent: 10px;
+  /* --link-color: #00ffff;  */
 }
 
 .darkmode{
@@ -26,8 +20,8 @@
   width: 25px;
   display: inline-block;
   border-radius: 100px;
-  background-color: var(--tertary-color);
-  border: black 1px solid;
+  background-color: var(--dark-color);
+  border: var(--dark-color) 1px solid;
   position: relative;
   transition: 0.2s ;
 }
@@ -37,7 +31,7 @@
   height: 9px;
   width: 9px;
   border-radius: 200px;
-  background-color: var(--light-dark-color);
+  background-color: var(--white-color);
   position: absolute;
   align-self: center;
   top: 0;
