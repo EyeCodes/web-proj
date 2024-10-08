@@ -115,19 +115,12 @@ var array = [{
   signInBTN.addEventListener("click", () =>{
     signInandOutCont.setAttribute("style", "display: grid")
   })
-  
-  signInandOutWrapper.addEventListener("mouseout", () =>{
-    signInandOutCont.addEventListener("click", () =>{
-      signInandOutCont.setAttribute("style", "display: none")
-    })
-  })
-  
-  signInandOutWrapper.addEventListener("mouseover", () =>{
-    signInandOutCont.addEventListener("click", () =>{
-      signInandOutCont.setAttribute("style", "display: grid")
-    })
-  })
 
+    signInandOutCont.addEventListener("click", (event) =>{
+      if(event.target == signInandOutCont){
+        signInandOutCont.setAttribute("style", "display: none")
+      }
+    })
 
   const signUp = document.querySelector(".signUp");
   const signIn = document.querySelector(".signIn");
