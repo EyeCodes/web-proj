@@ -43,7 +43,7 @@
           <label for="toggle" class="darkmode"></label>
           </div>
           <hr>
-          <a href="">Log Out</a>
+          <a class="signIn-button" >Sign in</a>
         </nav>
       </div>
     </div>
@@ -78,13 +78,72 @@
         <!-- <div class="swiper-pagination"></div> -->
       </div>
   </div>
+
+  <div class="signINandOUT-container">
+
+    <div class="signINandOUT-wrapper">
+      <h5 class="signIn">LOGIN</h5>
+      <h5 class="signUp">Sign Up</h5>
+
+      <form action="" class="signINandOUT-form signIn-form">
+        <h4>SIGN IN</h4>
+            <div class="userInput">
+              <label for="usernameLogin" class="signInLabel"><i class="fa fa-envelope"></i></label>
+              <input type="email" name="username" id="usernameLogin" class="user-input" placeholder="email" required>
+            </div>
+            <div class="userInput">
+              <label for="passwordLogin" class="signIn"><i class="fa fa-key"></i></label>
+              <input type="password" name="password" id="passwordLogin" class="user-input" placeholder="password" min="8" pattern="[0-9]{14,16}" required>
+            </div>
+
+            <button type="submit" class="signIn-submit">Sign In</button>
+            <a class="forgotpass">forgot password?</a>
+
+            <hr>
+            <div class="login-using-other-media">
+              <button class="media-login"><img src="./src/images/media-icons/google-icon.webp" alt="google icon"></button>
+              <button class="media-login"><img src="./src/images/media-icons/fb-icon.png" alt="google icon"></button>
+              <button class="media-login"><img src="./src/images/media-icons/x-icon.png" alt="google icon"></button>
+            </div>
+      </form>
+
+      <form action="" class="signINandOUT-form signUp-form">
+        <h4>SIGN UP</h4>
+        <div class="userInput">
+          <label for="username" class="signInLabel"><i class="fa fa-user"></i></label>
+          <input type="email" name="username" id="usernameLogin" class="user-input" placeholder="name" required>
+        </div>
+            <div class="userInput">
+              <label for="useremailLogin" class="signInLabel"><i class="fa fa-envelope"></i></label>
+              <input type="email" name="useremail" id="useremailLogin" class="user-input" placeholder="email" required>
+            </div>
+            <div class="userInput">
+              <label for="passwordLogin" class="signIn"><i class="fa fa-key"></i></label>
+              <input type="password" name="password" id="passwordLogin" class="user-input" placeholder="password" min="8" pattern="[0-9]{14,16}" required>
+            </div>
+            <div class="userInput">
+              <input type="checkbox" class="checkbox" required>
+              <label for="terms" class="terms">I accept the terms and conditions of the <a class = "terms-link">Privacy Policy</a></label>
+            </div>
+            <button type="submit" class="signIn-submit">Sign Up</button>
+            <hr>
+            <div class="login-using-other-media">
+              <button class="media-login"><img src="./src/images/media-icons/google-icon.webp" alt="google icon"></button>
+              <button class="media-login"><img src="./src/images/media-icons/fb-icon.png" alt="google icon"></button>
+              <button class="media-login"><img src="./src/images/media-icons/x-icon.png" alt="google icon"></button>
+            </div>
+      </form>
+    </div>
+
+  </div>
+
   <!--  -->
 
 <div class="tools cont">
   <div class="tool-button"><i class="fa fa-shopping-cart"></i></div>
   <div class="tool-button"><i class="fa fa-ticket-alt"></i></div>
   <div class="tool-button"><i class="fa fa-truck-moving"></i></div>
-  <div class="tool-button"><i class="fa fa-shop"></i></div>
+  <div class="tool-button"><i class="fa fa-map-location"></i></div>
   <div class="tool-button"><i class="fa fa-shipping-fast"></i></div>
 </div>
 
@@ -101,7 +160,7 @@
     <span class="category">SmartWatch</span>
     <span class="category">Scarf</span>
     <span class="category">Hair Accessories</span>
-    <span class="category">Wallet</span>
+    <span class="category"><Wallet></span>
     <span class="category">Stocking</span>
     <span class="category">Belt</span>
   </div>

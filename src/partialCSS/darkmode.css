@@ -10,7 +10,8 @@
   --dark-color: #ffffff;
   --white-color: #222028;
   --light-dark-color: #fff68b;
-  --lighter-dark-color: #686435;  
+  --lighter-dark-color: #686435; 
+  --cold-white:#70767a;
 }
 
 .theme-wrapper{

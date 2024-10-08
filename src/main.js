@@ -57,15 +57,11 @@ var array = [{
   for(let i = 0; i < array.length; i++){
     displayOnSale += `<div class="swiper-slide item sales"> 
     <img class="product-img" src="${array[i].image}">
-    <div class="product price">${array[i].price}</div>
+    <div class="product price">₱${array[i].price}</div>
     <div class="product brand">${array[i].name}</div>
       </div>`
   }
-   document.getElementById("onSale").innerHTML = displayOnSale //+ `
-  // <div class="swiper-pagination"></div>
-  // <!-- If we need navigation buttons -->
-  // <div class="swiper-button-prev"></div>
-  // <div class="swiper-button-next"></div>`;
+   document.getElementById("onSale").innerHTML = displayOnSale 
 
   // TRENDING 
 
@@ -73,7 +69,7 @@ var array = [{
   for(let i = 0; i <= 3; i++){
     displayOnTrend += `<div class="item trending"> 
     <img class="product-img" src="${array[i].image}">
-    <div class="product price">${array[i].price}</div>
+    <div class="product price"> ₱${array[i].price}</div>
     <div class="product brand">${array[i].name}</div>
 </div>`
   }
@@ -85,7 +81,7 @@ var array = [{
   for(let i = 0; i < array.length; i++){
     displayDiscovery += `<div class="item"> 
     <img class="product-img" src="${array[i].image}">
-    <div class="product price">${array[i].price}</div>
+    <div class="product price">₱${array[i].price}</div>
     <div class="product brand">${array[i].name}</div>
 </div>`
   }
@@ -110,4 +106,44 @@ var array = [{
       profileToggle = 0
     }
     console.log(profileToggle)
+  })
+
+  const signInBTN = document.querySelector(".signIn-button");
+  const signInandOutCont = document.querySelector(".signINandOUT-container");
+  const signInandOutWrapper = document.querySelector(".signINandOUT-wrapper");
+  
+  signInBTN.addEventListener("click", () =>{
+    signInandOutCont.setAttribute("style", "display: grid")
+  })
+
+  signInandOutWrapper.addEventListener("mouseover", () =>{
+    signInandOutCont.addEventListener("click", () =>{
+      signInandOutCont.setAttribute("style", "display: grid")
+    })
+  })
+
+  signInandOutWrapper.addEventListener("mouseout", () =>{
+    signInandOutCont.addEventListener("click", () =>{
+      signInandOutCont.setAttribute("style", "display: none")
+    })
+  })
+
+  const signUp = document.querySelector(".signUp");
+  const signIn = document.querySelector(".signIn");
+  const signUpForm = document.querySelector(".signUp-form");
+  const signUpFormToFill = document.querySelector(".signINandOUT-form");
+  const signInForm = document.querySelector(".signIn-form");
+
+  signUp.addEventListener("click", () => {
+    signUpForm.setAttribute("style", "display: flex")
+    signUp.setAttribute("style", "background-color: white")
+    signIn.setAttribute("style", "background: none")
+    signInForm.setAttribute("style", "display: none")
+  })
+  
+  signIn.addEventListener("click", () => {
+    signInForm.setAttribute("style", "display: flex")
+    signUpForm.setAttribute("style", "display: none")
+    signIn.setAttribute("style", "background-color: white")
+    signUp.setAttribute("style", "background: none")
   })
