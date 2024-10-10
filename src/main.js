@@ -2,51 +2,61 @@
 var array = [{
   image: "./src/images/resources/placeholder.png",
   price: 1_000_000,
-  name: "TSINILAS"
+  discount: 40,
+  name: "TSINILA5S"
   },
   {
     image: "./src/images/resources/placeholder.png",
     price: 294,
+    discount: 40,
     name: "EGGPLANT"
     },
     {
       image:"./src/images/resources/placeholder.png",
       price: 20_000,
+      discount: 40,
       name: "NIKOAVOCADO"
       },
       {
         image: "./src/images/resources/placeholder.png",
         price: 20_000,
+        discount: 40,
         name: "NIKOAVOCADO"
         },
         {
           image: "./src/images/resources/placeholder.png",
           price: 20_000,
+          discount: 40,
           name: "NIKOAVOCADO"
           },
           {
             image: "./src/images/resources/placeholder.png",
             price: 20_000,
+            discount: 40,
             name: "NIKOAVOCADO"
             },
             {
               image: "./src/images/resources/placeholder.png",
               price: 20_000,
+              discount: 40,
               name: "NIKOAVOCADO"
               },
               {
                 image: "./src/images/resources/placeholder.png",
                 price: 20_000,
+                discount: 40,
                 name: "NIKOAVOCADO"
                 },
                 {
                   image: "./src/images/resources/placeholder.png",
                   price: 20_000,
+                  discount: 40,
                   name: "NIKOAVOCADO"
                   },
                   {
                     image: "./src/images/resources/placeholder.png",
                     price: 20_000,
+                    discount: 40,
                     name: "NIKOAVOCADO"
                     }
       ]
@@ -55,13 +65,18 @@ var array = [{
   
   var displayOnSale = "";
   for(let i = 0; i < array.length; i++){
+    let discountPercentage = array[i].price * (array[i].discount / 100)
+    let discountPrice =  Math.round( array[i].price - discountPercentage)
     displayOnSale += `<div class="swiper-slide item sales"> 
     <img class="product-img" src="${array[i].image}">
-    <div class="product price">₱${array[i].price}</div>
+    <div class="price-wrapper">
+     <div class="product price">₱${array[i].price}</div>
+    <div class="product" data-discountedPrice>₱${discountPrice} </div>
+    </div>
     <div class="product brand">${array[i].name}</div>
       </div>`
   }
-   document.getElementById("onSale").innerHTML = displayOnSale 
+  document.getElementById("onSale").innerHTML = displayOnSale 
 
   // TRENDING 
 
