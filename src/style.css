@@ -13,7 +13,7 @@
   /* border: 1px red solid; */
   letter-spacing: -.3px;
   font-weight: var(--boldness);
-  font-family: 'Roboto', 'Times New Roman', Times, serif;
+  font-family: 'Roboto', Georgia, 'Times New Roman', Times;
 }
 
 body::-webkit-scrollbar{
@@ -99,7 +99,6 @@ body{
   width: 350px;
   padding: 10px;
   background-color: var(--primary-color);
-  filter: drop-shadow(0 0 100em var(--dark-color));
   opacity: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -109,7 +108,6 @@ body{
   padding: 10px;
   text-align: center;
 }
-
 
 .signINandOUT-form{
 background-color: white;
@@ -143,7 +141,11 @@ gap: 1em;
   height: 30px;
   padding: 0 10px;
 }
-
+.user-input:focus{
+  background-color: #312e3b;
+  outline-color: var(--primary-color);
+  color: var(--primary-color);
+}
 .signIn-submit{
   height: fit-content;
   width: fit-content;
@@ -204,7 +206,6 @@ object-fit: cover;
 }
 
 .display-product, .cont:nth-child(3){
-  border-radius: 5px;
   box-shadow: 0px 2px 5px -2px black;
 }
 .tools{
@@ -287,6 +288,7 @@ object-fit: cover;
   display: grid;
   grid-row: 50px 1fr;
 }
+
 .catalog-section{
   width: fit-content;
   margin-left: 1em;
@@ -315,7 +317,6 @@ object-fit: cover;
   padding: 20px;
   background-color: var(--white-color);
 }
-
 .item{
   width: 240px;
   display: flex;
@@ -329,7 +330,25 @@ object-fit: cover;
 .item:hover{
 transform: scale(1.1);
 }
-
+.product-img{
+  height: 200px;
+  object-fit:contain;
+  border-bottom: solid 1px black;
+}
+.product{
+  height: auto;
+  width: auto;
+}
+.price, .brand, [data-discountedPrice] {
+  padding: 5px;
+  font-size: 1em;
+  font-weight: 700;
+}
+.price-wrapper{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
+}
 .sales::after, .trending::after{
   content: "";
   display: inline-block;
@@ -339,12 +358,17 @@ transform: scale(1.1);
   transform: skewY(12deg);
   border-top-right-radius: 2px;
   color: var(--tertiary-color);
+  font-size: 70%;
   top: 0;
   right: 0;
 }
 
 .sales .price{
   text-decoration: line-through;
+  font-size: .8em;
+  padding-left: 0;
+  font-weight: 300;
+  color: crimson;
 }
 .sales::after{
   content: "SALES";
@@ -356,20 +380,11 @@ transform: scale(1.1);
 #onSale::-webkit-scrollbar{
   display: none;
 }
-.product-img{
-  height: 200px;
-  object-fit:contain;
-  border-bottom: solid 1px black;
-}
-.product{
-  height: auto;
-  width: auto;
-}
-.price, .brand{
-  padding: 5px;
+
+[data-discountedPrice]{
   font-size: 1em;
-  font-weight: 500;
 }
+
 
 
 /*IPAD PRO view*/
@@ -389,7 +404,6 @@ transform: scale(1.1);
     .hero, .tools, .categories{
     width: 100dvw;
     box-shadow: none;
-    border-radius: 0 !important;
     }
     .swiper-button-next, .swiper-button-prev{
       display: none;
@@ -431,7 +445,6 @@ transform: scale(1.1);
     .hero, .tools, .categories{
     width: 100dvw;
     box-shadow: none;
-    border-radius: 0 !important;
     }
     .swiper-button-next, .swiper-button-prev{
       display: none;
@@ -458,10 +471,13 @@ transform: scale(1.1);
       width: 240px !important;
     }
   }
-
 /* mobile view */
 @media screen and (max-width: 699px){
 
+  header{
+    position: fixed !important;
+    z-index: 99;
+  }
   .navSection{
     font-size: .6rem;
   }
@@ -485,6 +501,7 @@ transform: scale(1.1);
       gap: 0;
     }
     .hero{
+      margin-top: 50px;
       height: 15em;
     }
 
@@ -546,6 +563,9 @@ transform: scale(1.1);
   .sales{
     width: 190px !important;
   }
+  .sales::after, .trending::after{
+    font-size: 50%;
+  }
   .item{
     width: 45%;
   }
@@ -555,6 +575,7 @@ transform: scale(1.1);
     row-gap: 1em;
   }
   .ftr span, .cRights{
-    font-size: .6em !important;
+    text-align: center;
+    font-size: .9em ;
   }
 }

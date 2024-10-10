@@ -104,7 +104,7 @@
             </div>
             <div class="userInput">
               <label for="passwordLogin" class="signIn"><i class="fa fa-key"></i></label>
-              <input type="password" name="password" id="passwordLogin" class="user-input" placeholder="password" min="8" pattern="[0-9]{14,16}" required>
+              <input type="password" name="password" id="passwordLogin" class="user-input" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
             </div>
             <div class="userInput">
               <input type="checkbox" class="checkbox" id="rememberAcc">
@@ -126,7 +126,7 @@
         <h4>CREATE ACCOUNT</h4>
         <div class="userInput">
           <label for="username" class="signInLabel"><i class="fa fa-user"></i></label>
-          <input type="email" name="username" id="usernameLogin" class="user-input" placeholder="name" required>
+          <input type="text" name="username" id="usernameLogin" class="user-input" placeholder="name"  min="8" max="50" required>
         </div>
             <div class="userInput">
               <label for="useremailLogin" class="signInLabel"><i class="fa fa-envelope"></i></label>
@@ -137,10 +137,16 @@
               <input type="password" name="password" id="passwordLogin" class="user-input" placeholder="password" min="8" pattern="[0-9]{14,16}" required>
             </div>
             <div class="userInput">
+              <label for="confirmPasswordLogin" class="signIn"><i class="fa fa-key"></i></label>
+              <input type="password" name="password" id="confirmPasswordLogin" class="user-input" placeholder="confirm password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+            </div>
+            <div class="userInput">
               <input type="checkbox" class="checkbox" id="termsAndCondition" required>
               <label for="termsAndCondition" class="terms">I accept the terms and conditions of the <a class = "terms-link">Privacy Policy</a></label>
             </div>
-            <button type="submit" class="signIn-submit"><samp></samp>Sign up</button>
+        
+            <button type="submit" class="signIn-submit"><samp></samp>sign up</button>
+        
             <hr>
             <div class="login-using-other-media">
               <button class="media-login"><img src="./src/images/media-icons/google-icon.webp" alt="google icon"></button>
@@ -262,6 +268,8 @@
   });
 
   const swiperSales = new Swiper('.sales-container', {
+    centeredSlides: true,
+    loop: true,
     slidesPerView: 4,
     autoplay: {
       delay: 5000,
