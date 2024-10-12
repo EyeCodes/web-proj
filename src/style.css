@@ -72,14 +72,12 @@ body{
 }
 
 .hero{
-  height: 20em;
+  height: 30em;
   width: var(--max-width);
-  position: relative;
-  background-image: url("./src/images/resources/banner_QA.svg");
-  background-size: contain;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-blend-mode:darken;
+}
+.banner{
+  height: 100%;
+  width: 100%;
 }
 
 .signINandOUT-container{

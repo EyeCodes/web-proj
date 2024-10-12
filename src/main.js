@@ -1,63 +1,73 @@
 
 var array = [{
-  image: "./src/images/resources/placeholder.png",
+  image: "./src/images/product-images/cartier-trinity-large-hoop-earrings.png",
   price: 1_000_000,
   discount: 40,
-  name: "TSINILA5S"
+  name: "Cartier Trinity Large Hoop Earings",
+  category: "earings"
   },
   {
-    image: "./src/images/resources/placeholder.png",
-    price: 294,
+    image: "./src/images/product-images/diamond-earings.png",
+    price: 9_999,
     discount: 40,
-    name: "EGGPLANT"
+    name: "Diamond Earings",
+    category: "earings"
     },
     {
-      image:"./src/images/resources/placeholder.png",
-      price: 20_000,
+      image:"./src/images/product-images/leather-wallet.png",
+      price: 135,
       discount: 40,
-      name: "NIKOAVOCADO"
+      name: "Leather Wallet",
+      category: "wallet"
       },
       {
-        image: "./src/images/resources/placeholder.png",
+        image: "./src/images/product-images/rolex-day-date.avif",
         price: 20_000,
         discount: 40,
-        name: "NIKOAVOCADO"
+        name: "Rolex Day-Date",
+        category: "wrist-watch"
         },
         {
-          image: "./src/images/resources/placeholder.png",
-          price: 20_000,
+          image: "./src/images/product-images/swiss-luxury.jpg",
+          price: 50_000,
           discount: 40,
-          name: "NIKOAVOCADO"
+          name: "Swiss Luxury",
+          category: "wrist-watch"
           },
           {
-            image: "./src/images/resources/placeholder.png",
-            price: 20_000,
+            image: "./src/images/product-images/emerald-silver-chain-pendant.png",
+            price: 28_000,
             discount: 40,
-            name: "NIKOAVOCADO"
+            name: "Emeral Silver Chain Pendant",
+            category: "necklace"
             },
             {
-              image: "./src/images/resources/placeholder.png",
-              price: 20_000,
+              image: "./src/images/product-images/diamond-necklace.png",
+              price: 25_000,
               discount: 40,
-              name: "NIKOAVOCADO"
+              name: "Diamond Necklace",
+              category: "necklace"
               },
               {
-                image: "./src/images/resources/placeholder.png",
-                price: 20_000,
-                discount: 40,
-                name: "NIKOAVOCADO"
+                image: "./src/images/product-images/ring-chained-pendant.png",
+                price: 400,
+                discount: null,
+                name: "Golden Ring Chained Pendant",
+                category:"necklace"
                 },
                 {
-                  image: "./src/images/resources/placeholder.png",
-                  price: 20_000,
-                  discount: 40,
-                  name: "NIKOAVOCADO"
+                  image: "./src/images/product-images/lion-head-24-karrot-bracelet.png",
+                  price: 8_500,
+                  discount: null,
+                  name: "Lion Head 24 karrot Bracelet",
+                  category:"bracelet"
                   },
                   {
-                    image: "./src/images/resources/placeholder.png",
+                    image: "./src/images/product-images/diamond-ring.png",
                     price: 20_000,
-                    discount: 40,
-                    name: "NIKOAVOCADO"
+                    discount: null,
+                    name: "Diamond Ring",
+                    category:"ring"
                     }
       ]
 
@@ -67,14 +77,16 @@ var array = [{
   for(let i = 0; i < array.length; i++){
     let discountPercentage = array[i].price * (array[i].discount / 100)
     let discountPrice =  Math.round( array[i].price - discountPercentage)
-    displayOnSale += `<div class="swiper-slide item sales"> 
+    if(array[i].discount != null){
+      displayOnSale += `<div class="swiper-slide item sales"> 
     <img class="product-img" src="${array[i].image}">
     <div class="price-wrapper">
-     <div class="product price">₱${array[i].price}</div>
+    <div class="product price">₱${array[i].price}</div>
     <div class="product" data-discountedPrice>₱${discountPrice} </div>
     </div>
     <div class="product brand">${array[i].name}</div>
       </div>`
+    }
   }
   document.getElementById("onSale").innerHTML = displayOnSale 
 
