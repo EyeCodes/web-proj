@@ -4,8 +4,10 @@
   background-color: #cfcfcf;
 }
 .swiper-slide{
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  position: relative;
+  /* background-color: aqua; */
 }
 .swiper-button-next {
   width: 40px;
