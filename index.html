@@ -96,11 +96,11 @@
       <h5 class="signIn">Sign in</h5>
       <h5 class="signUp">Sign up</h5>
 
-      <form action="" class="signINandOUT-form signIn-form">
+      <form action="login.php" method="GET" class="signINandOUT-form signIn-form">
         <h4>WELCOME</h4>
             <div class="userInput">
-              <label for="usernameLogin" class="signInLabel"><i class="fa fa-envelope"></i></label>
-              <input type="email" name="username" id="usernameLogin" class="user-input" placeholder="email" required>
+              <label for="emailInput" class="signInLabel"><i class="fa fa-envelope"></i></label>
+              <input type="email" name="email" id="emailInput" class="user-input" placeholder="email" required>
             </div>
             <div class="userInput">
               <label for="passwordLogin" class="signIn"><i class="fa fa-key"></i></label>
@@ -122,15 +122,17 @@
             </div>
       </form>
 
-      <form action="" class="signINandOUT-form signUp-form">
+      <!-- _____________________________________________________________________________________________________________________ -->
+
+      <form action="register.php" method="POST" class="signINandOUT-form signUp-form">
         <h4>CREATE ACCOUNT</h4>
         <div class="userInput">
           <label for="username" class="signInLabel"><i class="fa fa-user"></i></label>
           <input type="text" name="username" id="usernameLogin" class="user-input" placeholder="name"  min="8" max="50" required>
         </div>
             <div class="userInput">
-              <label for="useremailLogin" class="signInLabel"><i class="fa fa-envelope"></i></label>
-              <input type="email" name="useremail" id="useremailLogin" class="user-input" placeholder="email" required>
+              <label for="emailInput" class="signInLabel"><i class="fa fa-envelope"></i></label>
+              <input type="email" name="email" id="emailInput" class="user-input" placeholder="email" required>
             </div>
             <div class="userInput">
               <label for="passwordLogin" class="signIn"><i class="fa fa-key"></i></label>
