@@ -87,9 +87,17 @@ body{
   height: 100%;
   width: 100%;
   justify-content: center;
-  background-color: rgba(68, 68, 68, 0.5);
+  background-color: rgba(52, 52, 52, 0.5);
   align-items: center;
   inset: 0 0 0 0;
+}
+.signINandOUT-container span{
+  height: fit-content;
+  color: var(--dark-color);
+  position: absolute;
+  justify-self: center;
+  transform: translateY(300px);
+  font-weight: 700;
 }
 
 .signINandOUT-wrapper{
@@ -183,7 +191,7 @@ object-fit: cover;
   letter-spacing: .5px;
 }
 .terms{
-  font-size: .7em;
+  font-size: .6em;
   font-weight:500;
 }
 .terms-link{
@@ -333,14 +341,11 @@ transform: scale(1.1);
   object-fit:contain;
   border-bottom: solid 1px black;
 }
-.product{
-  height: auto;
-  width: auto;
-}
 .price, .brand, [data-discountedPrice] {
   padding: 5px;
   font-size: 1em;
   font-weight: 700;
+  text-overflow:clip;
 }
 .price-wrapper{
   display: flex;
